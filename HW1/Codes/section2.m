@@ -7,21 +7,27 @@ x = zeros(1000,1);
 x(250:end)=1;
 stem (x);
 %% Calculate and display Wavelet of the step signal 
-figure('name', 'haar2', 'NumberTitle', 'off')
-cwt(x,1:2,'haar','plot');
-title('haar2')
+wt = cwt(x,1:100,'haar');
+figure()
+subplot(5,1,1)
+stem(wt(100,:))
+title("haar scale=100")
 
-figure('name', 'haar10', 'NumberTitle', 'off')
-cwt(x,1:10,'haar','plot');
-title('haar10')
+subplot(5,1,2)
+stem(wt(30,:))
+title("haar scale=30")
 
-figure('name', 'haar20', 'NumberTitle', 'off')
-cwt(x,1:20,'haar','plot');
-title('haar20')
+subplot(5,1,3)
+stem(wt(20,:))
+title("haar scale=20")
 
-figure('name', 'haar30', 'NumberTitle', 'off')
-cwt(x,1:30,'haar','plot');
-title('haar30')
+subplot(5,1,4)
+stem(wt(10,:))
+title("haar scale=10")
+
+subplot(5,1,5)
+stem(wt(2,:))
+title("haar scale=2")
 
 figure('name', 'haar100', 'NumberTitle', 'off')
 cwt(x,1:100,'haar','plot');

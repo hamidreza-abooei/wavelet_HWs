@@ -8,4 +8,4 @@ x(500)=1;
 stem (x);
 %% Calculate and display 3D Wavelet of the impulse signal 
 figure()
-cwt(x,1:64,'haar','3Dplot');
+cwt(x,1:50,'haar','3Dplot');
