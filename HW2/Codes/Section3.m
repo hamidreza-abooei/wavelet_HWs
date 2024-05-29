@@ -3,10 +3,12 @@ clear
 close all;
 % Author Hamidreza Abooei
 %%
-load("./../Data/EEGP300.mat");
-fs = 240; %Hz
-data = signal(:,1); % Selecting the first channel of our signal.
+% load("./../Data/EEGP300.mat");
+load("./../Data/signalp300.mat");
 
+fs = 240; %Hz
+% data = signal(:,1); % Selecting the first channel of our signal.
+data = c;
 %% 2 level wavelet decomposition
 wv = 'db4';
 [c,l] = wavedec(data,2,wv);
