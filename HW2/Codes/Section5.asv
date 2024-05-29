@@ -40,7 +40,7 @@ title("Wavelet level1 dwt")
 xlabel("time")
 ylabel("Amplitude")
 
-%% Using wavedec to apply wavelet trasform 3 level and detect peaks
+%% Using wa
 [c,l] = wavedec(ecgsig,3,wname);
 approx = appcoef(c,l,wname);
 [cd1,cd2,cd3] = detcoef(c,l,[1 2 3]);
